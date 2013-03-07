@@ -39,5 +39,10 @@ namespace LearnWpf
             MessageBox.Show(str);
             str = "";
         }
+        private void hyper_Clrick(object sender, RoutedEventArgs e)
+        {
+            LearnWpf.anotherwindow anotherwindowobj = new LearnWpf.anotherwindow();
+            anotherwindowobj.Show();
+        }
     }
 }
