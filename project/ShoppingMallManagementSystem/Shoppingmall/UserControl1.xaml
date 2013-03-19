@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-              Background="Beige"  >
+             d:DesignHeight="300" d:DesignWidth="300" Background="Beige" >
     <Grid >
         <Image HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Source="/Shoppingmall;component/Images/images.jpg">
             <Image.OpacityMask>
