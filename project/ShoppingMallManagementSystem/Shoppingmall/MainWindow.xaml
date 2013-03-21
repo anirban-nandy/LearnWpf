@@ -36,7 +36,7 @@
             </TextBlock>
         </UniformGrid>
         <DockPanel DockPanel.Dock="Bottom" Name="infodoc" >
-            <my:UserControl1/>
+            
         </DockPanel>
         
     </DockPanel>

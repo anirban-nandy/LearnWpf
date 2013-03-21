@@ -50,8 +50,8 @@ namespace WpfApplication1
 
         private void Hyperlink_click(object sender, MouseEventArgs e)
         {
-            WpfApplication1.Groundfloor obj = new Groundfloor();
-               obj.Show();
+            //WpfApplication1.Groundfloor obj = new Groundfloor();
+            //   obj.Show();
         }
 
         private void shop_Click(object sender, RoutedEventArgs e)
@@ -67,6 +67,13 @@ namespace WpfApplication1
         private void feed_back_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void product_Click(object sender, RoutedEventArgs e)
+        {
+            WpfApplication1.UserControl1 UserControl1obj = new WpfApplication1.UserControl1();
+            infodoc.Children.Clear();
+            infodoc.Children.Add(UserControl1obj);
         }
 
         //private void product_Click(object sender, RoutedEventArgs e)
