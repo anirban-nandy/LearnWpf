@@ -76,11 +76,7 @@ namespace WpfApplication1
             infodoc.Children.Add(UserControl1obj);
         }
 
-        //private void product_Click(object sender, RoutedEventArgs e)
-        //{
-        // WpfApplication1.Uproduct obj=new Uproduct;
-        //    Uproduct.Show();
-        //}
+        
 
        
        
