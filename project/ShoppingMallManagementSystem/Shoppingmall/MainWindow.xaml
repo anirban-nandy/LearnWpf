@@ -17,6 +17,26 @@
                 Welcome to the Shoppingmall
             </Label>
         </UniformGrid>
+        <UniformGrid DockPanel.Dock="Top">
+            <TextBlock x:Name="_box" FontSize="64" CacheMode="BitmapCache" Text="you are here ">
+        <TextBlock.RenderTransform>
+            <TranslateTransform x:Name="AnimatedTranslateTransform" X="0" Y="0" />
+        </TextBlock.RenderTransform>
+        <TextBlock.Triggers>
+            <EventTrigger RoutedEvent="TextBlock.Loaded">
+              <BeginStoryboard>
+                <Storyboard>
+                  <DoubleAnimation
+                    Storyboard.TargetName="AnimatedTranslateTransform" 
+                    Storyboard.TargetProperty="X"
+                    From="-300" To="300" Duration="0:0:5" 
+                    AutoReverse="True" RepeatBehavior="Forever" />
+                </Storyboard>
+              </BeginStoryboard>
+            </EventTrigger>
+          </TextBlock.Triggers>
+            </TextBlock>
+        </UniformGrid>
         <UniformGrid  DockPanel.Dock="Top"  Rows="1">
             <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Margin="50,0,0,0" ToolTip="Product">Search By</Label>
                 <TextBox  Name="textBox1" Margin="100,0,0,0"   />

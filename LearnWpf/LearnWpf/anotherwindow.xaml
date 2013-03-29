@@ -3,6 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="anotherwindow" Height="300" Width="300">
     <Grid>
-        
+        <TextBlock x:Name="_box" FontSize="64" CacheMode="BitmapCache" Text="lorem ipsum">
+        <TextBlock.RenderTransform>
+            <TranslateTransform x:Name="AnimatedTranslateTransform" X="0" Y="0" />
+        </TextBlock.RenderTransform>
+        <TextBlock.Triggers>
+            <EventTrigger RoutedEvent="TextBlock.Loaded">
+              <BeginStoryboard>
+                <Storyboard>
+                  <DoubleAnimation
+                    Storyboard.TargetName="AnimatedTranslateTransform" 
+                    Storyboard.TargetProperty="X"
+                    From="-300" To="300" Duration="0:0:5" 
+                    AutoReverse="True" RepeatBehavior="Forever" />
+                </Storyboard>
+              </BeginStoryboard>
+            </EventTrigger>
+          </TextBlock.Triggers>
+        </TextBlock>
     </Grid>
 </Window>
