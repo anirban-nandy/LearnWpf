@@ -1,0 +1,28 @@
+﻿<Window x:Class="phonebookUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded"
+         xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
+           DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <Grid>
+        <ListView Margin="0,0,12,0"  ItemsSource="{Binding phonebookcollection}">
+        <ListView.View>
+
+            <GridView>
+
+                <GridViewColumn Width="100" Header="id" DisplayMemberBinding="pid" />
+
+<GridViewColumn Width="100" Header="Name" DisplayMemberBinding="pname"/>
+                    <GridViewColumn  Header="Mobileno" DisplayMemberBinding="pmobileno"/>
+
+                </GridView>
+
+        </ListView.View>
+
+        </ListView>
+
+
+    </Grid>
+</Window>
